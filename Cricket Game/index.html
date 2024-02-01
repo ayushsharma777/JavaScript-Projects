@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bat Ball Stump Game</title>
+    <link rel="stylesheet" href="game.css" />
+  </head>
+  <body>
+    <h1>Bat Ball Stump Game</h1>
+
+    <div>
+      <button
+        onclick="
+            userChoice = 'Bat';
+            computerChoice = generateComputerChoice();
+            result = getResult(userChoice,computerChoice);
+            showResult(userChoice,computerChoice,result);
+            "
+        class="choice-Button"
+      >
+        <img src="images/bat.png" alt="Bat-image" class="choice-Img" draggable="false" />
+      </button>
+      <button
+        onclick="
+            userChoice = 'Ball';
+            computerChoice = generateComputerChoice();
+            result = getResult(userChoice,computerChoice);
+            showResult(userChoice,computerChoice,result);
+            "
+        class="choice-Button"
+      >
+        <img src="images/ball.png" alt="Ball-image" class="choice-Img" draggable="false" />
+      </button>
+      <button
+        onclick="
+            userChoice = 'Stump';
+            computerChoice = generateComputerChoice();
+            result = getResult(userChoice,computerChoice);
+            showResult(userChoice,computerChoice,result);
+            "
+        class="choice-Button"
+      >
+        <img src="images/stump.png" alt="Stump-image" class="choice-Img" draggable="false"/>
+      </button>
+    </div>
+<div style="display: flex; align-items: center; justify-content: center; ">
+    <div class="headings">
+      <h3 style="font-size: 2.1rem; text-decoration: underline">ScoreBoard</h3>
+      <h3 id="user-move"></h3>
+      <h3 id="computer-move"></h3>
+      <h3 id="result"></h3>
+      <h3 id="score"></h3>
+    </div>
+  </div>
+    <button
+      onclick="localStorage.clear();
+              resetScore();"
+      class="reset-Button"
+    >
+      Reset
+    </button>
+
+    <script src="game.js"></script>
+  </body>
+</html>
